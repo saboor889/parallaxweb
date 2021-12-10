@@ -1,0 +1,568 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+/* ICON STYLES - ICON FROM: http://fontastic.me/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+    font-family: "untitled-font-1";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-up-open-big {
+    display: inline-block;
+}
+
+.icon-up-open-big:after {
+    content: "a";
+    font-size: 2.5em;
+    display: block;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    color: black;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.icon-up-open-big:hover:after {
+    color: white;
+}
+
+.scroll-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    padding: 0 10px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.l-left {
+    float: left;
+}
+
+.l-right {
+    float: right;
+}
+
+.end {
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: bold;
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+    -ms-transform: translateY(300px);
+    transform: translateY(300px);
+    -webkit-transition: opacity, -webkit-transform 1s;
+    transition: opacity, transform 1s;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #464646;
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: .18em;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: #464646;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-decoration: none !important;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.primary-heading {
+    font-size: 55px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+
+.mouse-icon {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+}
+
+
+/* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.header-top {
+    background: rgba(0, 47, 77, .3);
+    height: 70px;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    box-sizing: border-box;
+}
+
+section.first_sec {
+    padding: 0px 50px 0px 20px;
+}
+
+section {
+    padding: 0px 50px;
+}
+
+.first_sec .container-fluid::before {
+    content: "";
+    width: 220px;
+    height: 50px;
+    background-image: url(./imgs/dots.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 110px;
+    top: 90px;
+    background-size: 100%;
+}
+
+.first_sec .container-fluid::after {
+    content: "";
+    width: 270px;
+    height: 60px;
+    background-image: url(./imgs/dots.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    left: 0px;
+    background-size: 100%;
+}
+
+.row.for-top-pdng {
+    padding-top: 120px;
+}
+
+h1 {
+    font-size: 55px;
+    color: #00F7B5;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+
+section.first_sec p {
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: #464646;
+    text-transform: capitalize;
+}
+
+h5.slide-count {
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+a.rd-more-btn {
+    font-size: 16px;
+    color: black;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    transition: all ease-in-out 0.5s;
+    text-decoration: none !important;
+}
+
+a.rd-more-btn img {
+    transition: all ease-in-out 0.5s;
+}
+
+a.rd-more-btn:hover img {
+    margin-left: 10px;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 60px;
+    font-family: 'DM Sans';
+    color: black;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.first_sec img.play-icon {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    border: 0px !important;
+}
+
+.first_sec .slick-dots li button:before {
+    font-size: 12px;
+    color: #CCCCCC;
+}
+
+.first_sec .slick-dots li.slick-active button:before {
+    color: #42E5D9;
+}
+
+.for-video-brdr .slick-slide img {
+    border: 1px dashed #00f7b5;
+    padding: 10px !important;
+    border-radius: 40px;
+}
+
+#fp-nav.right {
+    right: 7px;
+}
+
+#fp-nav ul li .fp-tooltip {
+    opacity: 1 !important;
+    width: auto;
+    color: #464646;
+    font-weight: 300;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    width: 20px;
+    height: 20px;
+    margin: -7px 0 0 -4px;
+    margin-left: -34px !important;
+    background-color: transparent;
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    position: absolute;
+    top: 7px;
+    border: 0px !important;
+}
+
+#fp-nav ul li a.active::before {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 90px;
+    background-color: rgb(0 0 0 / 48%);
+    left: -20px;
+    top: 20px;
+}
+
+#fp-nav ul li a.active,
+.fp-slidesNav ul li a.active {
+    height: 110px;
+}
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    width: 14px;
+    height: 13px;
+}
+
+.toggle-menu {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+.toggle-menu i {
+    position: absolute;
+    display: block;
+    height: 2px;
+    background: black;
+    width: 50px;
+    right: 10px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.toggle-menu i:nth-child(1) {
+    top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+    top: 24px;
+    width: 35px;
+}
+
+.toggle-menu i:nth-child(3) {
+    top: 32px;
+    width: 20px;
+}
+
+.open-menu i:nth-child(1) {
+    top: 25px;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+    background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+    top: 25px;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+
+nav {
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+    background: black !important;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+.open-menu~nav {
+    opacity: 1;
+    padding: 30px 0px 80px;
+    z-index: 1000;
+    height: 100%;
+    /* top: 0px; */
+}
+
+.open-menu img#logo {
+    opacity: 0;
+}
+
+img#logo {
+    transition: all ease-in-out 0.5s;
+}
+
+.open-menu .toggle-menu i {
+    background: white !important;
+}
+
+.open-menu .toggle-menu i:nth-child(2) {
+    width: 0px;
+}
+
+.open-menu .toggle-menu i:nth-child(3) {
+    width: 50px;
+}
+
+nav li {
+    width: max-content;
+}
+
+.logo-x {
+    width: 90px;
+    margin-top: -70px;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+nav li a span {
+    display: block;
+    font-size: 10px;
+}
+
+.header-top.clearfix {
+    transition: all ease-in 2s;
+}
+
+.header-top.clearfix.open-menu {
+    background-color: black !important;
+}
+
+ul#menu {
+    padding: 0px 100px;
+}
+
+nav li a {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    display: block;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 500;
+}
+
+nav li.active a {
+    font-weight: bold;
+}
+
+nav li.active a span {
+    color: #00F7B5;
+}
+
+
+/* nav ul {
+    padding: 0 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+nav li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+nav li a {
+    font-size: 2em;
+    display: block;
+    padding: 30px;
+    text-align: center;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+} */
+
+
+/* nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+    background: #962D3E;
+}
+
+nav li:nth-child(even) a {
+    background: #aa3346;
+}
+
+nav li:nth-child(odd) a:hover {
+    background: #9e2f41;
+}
+
+nav li:nth-child(even) a:hover {
+    background: #c53c52;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+    background: #453659;
+} */
+
+
+/* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* #fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: black;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+} */
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #24221F;
+}
+
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 767px) {
+    nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    nav li {
+        margin-top: 1px;
+    }
+    nav li a {
+        font-size: 1.5em;
+    }
+    .scroll-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+    .open-menu~nav {
+        padding: 20px 0;
+    }
+    nav li a {
+        padding: 3px;
+    }
+}
