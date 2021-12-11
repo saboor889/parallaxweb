@@ -13,15 +13,15 @@
 
      // fullpage customization
      $('#fullpage').fullpage({
-         sectionsColor: ['#fff', '#F0F5F7', '#F2AE72', '#5C832F', '#B8B89F'],
+         sectionsColor: ['#fff', '#F0F5F7', '#F2AE72', '#000', '#DCE8EB'],
          sectionSelector: '.vertical-scrolling',
          slideSelector: '.horizontal-scrolling',
-         navigationTooltips: ['01.', '02.', '03.', '04.', '05.'],
+         navigationTooltips: ['01.', '02.', '03.', '04.', '05.', '06.', '07.', '08.', '09.', '10.', '11.'],
          navigation: true,
          showActiveTooltip: true,
          slidesNavigation: true,
          controlArrows: false,
-         anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
+         anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection', 'ninethSection', 'tenthSection', 'eleventhSection'],
          menu: '#menu',
 
          afterLoad: function(anchorLink, index) {
