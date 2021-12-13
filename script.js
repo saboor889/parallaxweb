@@ -5,67 +5,54 @@
 
 
      // toggle menu 
-     $header_top.find('a').on('click', function() {
+     $('.toggle-menu').on('click', function() {
          $(this).parent().toggleClass('open-menu');
-     });
-
-
-
-     // fullpage customization
-     $('#fullpage').fullpage({
-         sectionsColor: ['#fff', '#F0F5F7', '#F2AE72', '#000', '#DCE8EB'],
-         sectionSelector: '.vertical-scrolling',
-         slideSelector: '.horizontal-scrolling',
-         navigationTooltips: ['01.', '02.', '03.', '04.', '05.', '06.', '07.', '08.', '09.', '10.', '11.'],
-         navigation: true,
-         showActiveTooltip: true,
-         slidesNavigation: true,
-         controlArrows: false,
-         anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection', 'ninethSection', 'tenthSection', 'eleventhSection'],
-         menu: '#menu',
-
-         afterLoad: function(anchorLink, index) {
-             $header_top.css('background', 'transparent');
-             $nav.css('background', 'transparent');
-             // if (index == 5) {
-             //     $('#fp-nav').hide();
-             //   }
-         },
-
-         onLeave: function(index, nextIndex, direction) {
-             if (index == 5) {
-                 $('#fp-nav').show();
-             }
-         },
-
-         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-             if (anchorLink == 'fifthSection' && slideIndex == 1) {
-                 $.fn.fullpage.setAllowScrolling(false, 'up');
-                 $header_top.css('background', 'transparent');
-                 $nav.css('background', 'transparent');
-                 $(this).css('background', '#374140');
-                 $(this).find('h2').css('color', 'white');
-                 $(this).find('h3').css('color', 'white');
-                 $(this).find('p').css({
-                     'color': '#DC3522',
-                     'opacity': 1,
-                     'transform': 'translateY(0)'
-                 });
-             }
-         },
-
-         onSlideLeave: function(anchorLink, index, slideIndex, direction) {
-             if (anchorLink == 'fifthSection' && slideIndex == 1) {
-                 $.fn.fullpage.setAllowScrolling(true, 'up');
-                 $header_top.css('background', 'rgba(0, 47, 77, .3)');
-                 $nav.css('background', 'rgba(0, 47, 77, .25)');
-             }
-         }
      });
 
 
      $(document).ready(function() {
          $('.single-item').slick({
              dots: true,
+             arrows: false,
+         });
+
+         $('.single-item-arrow').slick({
+             arrows: true,
+         });
+
+         $('.logos-item').slick({
+             dots: false,
+             arrows: true,
+             infinite: false,
+             speed: 300,
+             slidesToShow: 4,
+             slidesToScroll: 1,
+             responsive: [{
+                     breakpoint: 1024,
+                     settings: {
+                         slidesToShow: 3,
+                         slidesToScroll: 3,
+                         infinite: true,
+                         dots: true
+                     }
+                 },
+                 {
+                     breakpoint: 600,
+                     settings: {
+                         slidesToShow: 2,
+                         slidesToScroll: 2
+                     }
+                 },
+                 {
+                     breakpoint: 480,
+                     settings: {
+                         slidesToShow: 1,
+                         slidesToScroll: 1
+                     }
+                 }
+                 // You can unslick at a given breakpoint now by adding:
+                 // settings: "unslick"
+                 // instead of a settings object
+             ]
          });
      });
